@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+  @import "bootstrap";
+  body {
+    background-color: #333; /* Fond gris foncé */
+    color: #f8f9fa; /* Couleur de texte plus claire */
+  }
+  
+  .btn {
+    background-color: #f8f9fa; /* Blanc cassé */
+    color: #333; /* Texte foncé pour contraster */
+  }

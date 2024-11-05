@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
-  belongs_to :admin, class_name: 'User', foreign_key: 'user_id'
-  has_many :attendances
+  belongs_to :admin, class_name: 'User', foreign_key: 'user_id' # Associe chaque événement à son administrateur
+
+  has_many :attendances, dependent: :destroy
   has_many :attendees, through: :attendances, source: :user
 
   validates :start_date, presence: true

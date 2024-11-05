@@ -1,0 +1,11 @@
+<h1>Créer un utilisateur</h1>
+<%= form_with(model: @user, local: true) do |f| %>
+  <!-- formulaire utilisateur -->
+  <%= f.submit 'Créer un utilisateur', class: 'btn btn-primary' %>
+<% end %>
+
+<h1>Modifier le profil</h1>
+<%= form_with(model: @user, local: true) do |f| %>
+  <!-- formulaire utilisateur -->
+  <%= f.submit 'Mettre à jour', class: 'btn btn-primary' %>
+<% end %>

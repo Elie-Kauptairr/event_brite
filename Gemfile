@@ -9,10 +9,12 @@ gem "puma", ">= 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
-gem "jbuilder"
+gem "jbuilder"  
 gem "bcrypt", "~> 3.1.7"
 gem "tzinfo-data", platforms: %i[windows jruby]
 gem "bootsnap", require: false
+gem 'devise'
+
 
 group :development, :test do
   gem "debug", platforms: %i[mri windows], require: "debug/prelude"
@@ -25,6 +27,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'letter_opener'
   gem "web-console"
 end
 

@@ -1,0 +1,7 @@
+<h1>Profil de <%= @user.first_name %> <%= @user.last_name %></h1>
+<p>Email : <%= @user.email %></p>
+<p>Description : <%= @user.description %></p>
+
+<%= link_to 'Modifier', edit_user_path(@user), class: 'btn btn-primary' %>
+<%= link_to 'Retour à la liste', users_path, class: 'btn btn-secondary' %>
+<%= link_to 'Supprimer', user_path(@user), method: :delete, data: { confirm: 'Êtes-vous sûr ?' }, class: 'btn btn-danger' %>

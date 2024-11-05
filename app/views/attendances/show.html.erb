@@ -1,0 +1,4 @@
+<h1>Participation de <%= @attendance.user.first_name %> à l'événement <%= @attendance.event.title %></h1>
+<p>Participant : <%= @attendance.user.first_name %> <%= @attendance.user.last_name %></p>
+<p>Événement : <%= @attendance.event.title %></p>
+<%= link_to 'Retour', attendances_path, class: 'btn btn-secondary' %>

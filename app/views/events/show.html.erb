@@ -1,0 +1,25 @@
+<h1><%= @event.title %></h1>
+<p><%= @event.description %></p>
+<p>Date : <%= @event.start_date %></p>
+<p>Durée : <%= @event.duration %> minutes</p>
+<p>Prix : <%= @event.price %> €</p>
+<p>Lieu : <%= @event.location %></p>
+
+<h2>Participants</h2>
+<% if @event.attendees.any? %>
+  <ul>
+    <% @event.attendees.each do |attendee| %>
+      <li><%= attendee.first_name %> <%= attendee.last_name %> - <%= attendee.email %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Aucun participant pour le moment.</p>
+<% end %>
+
+
+<!-- Bouton pour participer à l'événement -->
+<%= button_to 'Participer à cet événement', event_attendances_path(@event), method: :post, class: 'btn btn-primary' %>
+
+<%= link_to 'Modifier', edit_event_path(@event), class: 'btn btn-primary' %>
+<%= link_to 'Retour à la liste', events_path %> |
+<%= link_to 'Supprimer', event_path(@event), method: :delete, data: { confirm: 'Êtes-vous sûr ?' }, class: 'btn btn-danger' %>
